@@ -151,11 +151,11 @@
   width: 100%;
   height: 100vh;
   min-height: 100%;
-  background-color: #34495e;
+  background-color: #fff;
   -webkit-transform: translate(-100%, 0px);
   -ms-transform: translate(-100%, 0px);
   transform: translate(-100%, 0px);
-  color: #fff;
+  color: #777;
   text-align: left;
 }
 
@@ -165,14 +165,26 @@
   font-weight: 400;
 }
 
+.page-section {
+  display: block;
+  width: 750px;
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .page-back-left {
   position: fixed;
-  top: 1em;
+  top: 0.5em;
   right: 7%;
+  z-index: 150;
   width: 60px;
   height: 60px;
   border-radius: 100%;
-  background-color: #fff;
+  background-color: #ce3633;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
   cursor: pointer;
 }
 
@@ -187,22 +199,23 @@
   width: 100%;
   height: 100%;
   min-height: 100%;
-  background-color: #ecf0f1;
-  -webkit-transform: translate(100%, 0px);
-  -ms-transform: translate(100%, 0px);
-  transform: translate(100%, 0px);
-  color: #97a8b2;
+  background-color: #fff;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  color: #777;
   text-align: right;
 }
 
 .page-back-right {
   position: fixed;
   left: 7%;
-  top: 1em;
+  top: 0.5em;
+  z-index: 150;
   width: 60px;
   height: 60px;
   border-radius: 100%;
-  background-color: #97a8b2;
+  background-color: #ce3633;
   cursor: pointer;
 }
 
@@ -220,8 +233,9 @@
 }
 
 .navbar {
+  z-index: 100;
   width: 100%;
-  height: 100%;
+  height: 75px;
   background-color: #ececec;
 }
 
@@ -235,6 +249,53 @@
 .nav-menu {
   right: 40%;
   float: right;
+}
+
+.left-side-banner {
+  width: 100%;
+  height: 75%;
+  background-image: url('../images/left-side-banner.jpg');
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.left-side-heading {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.left-side-p {
+  text-align: center;
+}
+
+.transparent-button {
+  display: block;
+  width: 100%;
+  height: 40px;
+  max-width: 150px;
+  margin: 60px auto;
+  border: 2px solid #ce3633;
+  background-color: transparent;
+  -webkit-transition: background-color 300ms ease, color 300ms ease;
+  transition: background-color 300ms ease, color 300ms ease;
+  color: #ce3633;
+  text-align: center;
+}
+
+.transparent-button:hover {
+  background-color: #ce3633;
+  color: #fff;
+}
+
+.right-side-banner {
+  position: static;
+  width: 100%;
+  height: 75%;
+  background-image: url('../images/right-side-banner.jpg'), url('../images/example-bg.png');
+  background-position: 50% 50%, 0px 0px;
+  background-size: cover, 125px;
+  background-repeat: no-repeat, repeat;
 }
 
 html.w-mod-js *[data-ix="hide-on-load-left"] {
@@ -254,6 +315,11 @@ html.w-mod-js *[data-ix="hide-on-load-right"] {
     background-image: url('../images/supply.jpg');
     background-position: 50% 50%;
     background-size: cover;
+  }
+  .page-right {
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
   }
 }
 
