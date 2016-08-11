@@ -1,7 +1,24 @@
+/*Side Navigation Hidden*/
+.page-left .w-nav-button {
+    display: none !important;
+}
 .page-right .w-nav-button {
-  display: none !important;
+    display: none !important;
 }
 
-.page-left .w-nav-button {
-  display: none !important;
+/*Mobile Menu*/
+.nav-link {
+  text-align: center;
+}
+.w--nav-menu-open {
+    text-align: center;
+    min-width: 100%;
+}
+.w--nav-menu-open a {
+  min-width: 100%;
+  transition: .3s;
+}
+
+.w-nav-button.w--open {
+  height: 100%;
 }
