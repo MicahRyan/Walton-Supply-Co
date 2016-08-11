@@ -1,9 +1,23 @@
+/*Home Page*/
+.side-left-hover {
+  text-transform: uppercase;
+}
 /*Side Navigation Hidden*/
 .page-left .w-nav-button {
     display: none !important;
 }
 .page-right .w-nav-button {
     display: none !important;
+}
+
+.left-side-heading {
+  text-transform: uppercase;
+}
+
+@media (max-width: 479px) {
+  .filter-item {
+    display: inline;
+  }
 }
 
 /*Mobile Menu*/
