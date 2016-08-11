@@ -15,6 +15,9 @@
 }
 
 @media (max-width: 479px) {
+  .filter-text-div {
+    margin: 10px;
+  }
   .filter-item {
     display: inline;
   }
