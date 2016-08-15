@@ -206,9 +206,9 @@
   height: 100%;
   min-height: 100%;
   background-color: #fff;
-  -webkit-transform: translate(100%, 0px);
-  -ms-transform: translate(100%, 0px);
-  transform: translate(100%, 0px);
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
   color: #777;
   text-align: right;
 }
@@ -329,44 +329,81 @@
   margin-top: 40px;
 }
 
+.filter-section.filters-button-group.button-group {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .filter-list {
   display: inline;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 
 .filter-item {
   display: inline-block;
-  width: 25%;
+  width: 20%;
 }
 
 .filter-text-div {
   display: block;
-  width: 150px;
+  width: 100%;
+  max-width: 145px;
   margin-right: auto;
   margin-left: auto;
 }
 
 .filter-text {
   width: 100%;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  background-color: #ce3633;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  background-color: transparent;
   -webkit-transition: background-color 300ms ease;
   transition: background-color 300ms ease;
   color: #fff;
+  font-size: 22px;
+  font-weight: 400;
   text-align: center;
   text-transform: uppercase;
   cursor: pointer;
 }
 
 .filter-text:hover {
-  background-color: #ad302d;
+  background-color: transparent;
 }
 
 .side-page-bottom {
+  position: static;
   width: 100%;
-  height: 200px;
-  margin-top: 40px;
+  height: 100%;
+  margin-top: 20px;
   background-color: #cecece;
+}
+
+.side-page-bottom.grid {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 30px;
 }
 
 .main-hero-container {
@@ -379,7 +416,7 @@
 }
 
 .main-hero-div {
-  margin-top: 25%;
+  margin-top: 125px;
 }
 
 .main-hero-text {
@@ -402,6 +439,175 @@
 
 .main-hero-text.hero-3 {
   display: inline-block;
+}
+
+.mailchimp-form {
+  display: block;
+  width: 400px;
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.mailchimp-input {
+  display: inline-block;
+  width: 60%;
+  height: 40px;
+  max-height: 100%;
+  margin-right: 1%;
+  margin-bottom: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: hsla(0, 0%, 47%, .55);
+}
+
+.mailchimp-submit {
+  width: 37%;
+  height: 40px;
+  max-height: 100%;
+  border: 2px solid #ce3633;
+  background-color: transparent;
+  -webkit-transition: background-color 300ms ease, color 300ms ease;
+  transition: background-color 300ms ease, color 300ms ease;
+  font-family: 'Open Sans', sans-serif;
+  color: #ce3633;
+  text-transform: uppercase;
+}
+
+.mailchimp-submit:hover {
+  background-color: #ce3633;
+  color: #fff;
+}
+
+.filter-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+}
+
+.filterable-item {
+  width: 25%;
+  height: 250px;
+  max-height: 100%;
+  margin: 20px 10px;
+  background-image: url('../images/example-bg.png');
+  background-position: 0px 0px;
+  background-size: 125px;
+}
+
+.filterable-print.filterable-item.mix {
+  background-image: url('../images/right-side-banner.jpg');
+  background-size: 750px;
+}
+
+.filterable-print.filterable-item.mix.all {
+  display: none;
+  width: 500px;
+  max-width: 30%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.filterable-web.filterable-item.mix {
+  background-image: url('../images/left-side-banner.jpg');
+  background-size: 750px;
+}
+
+.filterable-web.filterable-item.mix.all {
+  display: none;
+  width: 500px;
+  max-width: 30%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background-image: url('../images/right-side-banner.jpg');
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.filterable-video.filterable-item.mix {
+  background-image: url('../images/design.jpg');
+  background-size: 2848px;
+}
+
+.filterable-video.filterable-item.mix.all {
+  display: none;
+  width: 500px;
+  max-width: 30%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background-image: url('../images/right-side-banner.jpg');
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.filterable-motion.filterable-item.mix {
+  background-image: url('../images/supply.jpg');
+  background-size: 2848px;
+}
+
+.filterable-motion.filterable-item.mix.all {
+  display: none;
+  width: 500px;
+  max-width: 30%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background-image: url('../images/right-side-banner.jpg');
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.side-bottom-div {
+  position: relative;
+  background-color: #cecece;
+}
+
+.filter-div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.filter-itme {
+  height: 50px;
+  margin-right: 5px;
+  margin-left: 5px;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background-color: #ce3633;
+  -webkit-transition: background-color 300ms ease;
+  transition: background-color 300ms ease;
+}
+
+.filter-itme:hover {
+  background-color: #ad302d;
 }
 
 html.w-mod-js *[data-ix="hide-on-load-left"] {
@@ -429,13 +635,30 @@ html.w-mod-js *[data-ix="hero-text-on-load"] {
     background-position: 50% 50%;
     background-size: cover;
   }
+  .page-left {
+    -webkit-transform: translate(-100%, 0px);
+    -ms-transform: translate(-100%, 0px);
+    transform: translate(-100%, 0px);
+  }
   .page-right {
-    -webkit-transform: translate(100%, 0px);
-    -ms-transform: translate(100%, 0px);
-    transform: translate(100%, 0px);
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
   }
   .left-hero {
     padding-top: 40%;
+  }
+  .side-hero-text {
+    opacity: 0;
+    -webkit-transform: translate(0px, 25px);
+    -ms-transform: translate(0px, 25px);
+    transform: translate(0px, 25px);
+  }
+  .filter-text-div {
+    width: 130px;
+  }
+  .main-hero-div {
+    margin-top: 50px;
   }
   .main-hero-text.hero-1 {
     font-size: 24px;
@@ -459,15 +682,30 @@ html.w-mod-js *[data-ix="hero-text-on-load"] {
   .filter-list {
     display: inline-block;
   }
+  .filter-text-div {
+    width: 100%;
+    max-width: 145px;
+  }
   .filter-text {
     display: block;
     width: 75%;
     margin-right: auto;
     margin-left: auto;
-    font-size: 25px;
+    font-size: 15px;
   }
   .main-hero-div {
     display: none;
+  }
+  .filter-print.filter-text.filter {
+    width: 100%;
+    font-size: 20px;
+  }
+  .filter-video.filter-text.filter {
+    width: 100%;
+    font-size: 20px;
+  }
+  .filter-motion.filter-text.filter {
+    font-size: 20px;
   }
 }
 
@@ -479,9 +717,9 @@ html.w-mod-js *[data-ix="hero-text-on-load"] {
     width: 10em;
   }
   .page-right {
-    -webkit-transform: translate(100%, 0px);
-    -ms-transform: translate(100%, 0px);
-    transform: translate(100%, 0px);
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
   }
   .left-hero {
     padding-top: 100%;
@@ -491,6 +729,11 @@ html.w-mod-js *[data-ix="hero-text-on-load"] {
     padding-right: 0px;
     color: #fff;
   }
+  .filter-item {
+    width: 100%;
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
   .filter-text-div {
     width: 90%;
     text-align: center;
@@ -499,5 +742,18 @@ html.w-mod-js *[data-ix="hero-text-on-load"] {
     display: block;
     width: 100%;
     font-size: 12px;
+  }
+  .mailchimp-input {
+    width: 100%;
+    margin-right: 0%;
+  }
+  .mailchimp-submit {
+    width: 100%;
+  }
+  .filter-itme {
+    margin-bottom: 2px;
+    -webkit-flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
   }
 }
